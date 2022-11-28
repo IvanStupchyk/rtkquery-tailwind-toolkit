@@ -1,23 +1,37 @@
 import React from "react";
-import {useSearchUsersQuery} from "../../store/github/github.api"
+import {useSearchUsersQuery, useLazyGetUserReposQuery} from "../../store/github/github.api"
 import {useDebounce} from "../../hooks/debounce";
 
 export const HomePage = () => {
   const [search, setSearch] = React.useState<string>('')
+  const [dropdown, setDropdown] = React.useState<boolean>(false)
+
   const debounced = useDebounce(search)
 
-  const {isError, isLoading, data} = useSearchUsersQuery(debounced, {
-    skip: debounced.length < 3
+  const {
+    isError: isErrorUsersList,
+    isLoading: isLoadingUsersList,
+    data: users
+  } = useSearchUsersQuery(debounced, {
+    skip: debounced.length < 3,
+    refetchOnFocus: true
   })
+
+  const [fetchRepos, {isLoading: areReposLoading, data: userRepos}] = useLazyGetUserReposQuery()
+  const switchToUserPage = (userName: string) => {
+    return () => {
+      fetchRepos(userName)
+    }
+  }
 
 
   React.useEffect(() => {
-
-  }, [debounced])
+    setDropdown(debounced.length > 2 && users?.length! > 0)
+  }, [debounced, users])
 
   return (
     <div className="flex justify-center pt-10 mx-auto h-screen w-screen">
-      {isError && <p className="text-center text-red-600">Something went wrong...</p>}
+      {isErrorUsersList && <p className="text-center text-red-600">Something went wrong...</p>}
 
       <div className="relative w-[560px]">
         <input
@@ -25,11 +39,33 @@ export const HomePage = () => {
           type="text"
           placeholder="Search for Github username"
           value={search}
-          onChange={e => {setSearch(e.target.value)}}
+          onChange={e => {
+            setSearch(e.target.value)
+          }}
         />
+        {
+          dropdown &&
+          <ul className="list-none absolute top-[42px] left-0 right-0 max-h-[200px] overflow-y-scroll shadow-md bg-white">
+            {isLoadingUsersList && <p className="text-center">Loading...</p>}
+            {users?.map(user => (
+              <li
+                key={user.id}
+                className="py-2 px-4 hover:bg-gray-500 hover:text-white transition-colors cursor-pointer"
+                onClick={switchToUserPage(user.login)}
+              >
+                {user.login}
+              </li>
+            ))}
+          </ul>
+        }
 
-        <div className="absolute top-[42px] left-0 right-0 max-h-[200px] shadow-md bg-white">
-
+        <div className="container">
+          {areReposLoading && <p className="text-center">Repos are loading...</p>}
+          {
+            userRepos?.map(repos => (
+              <p>{repos.url}</p>
+            ))
+          }
         </div>
       </div>
     </div>

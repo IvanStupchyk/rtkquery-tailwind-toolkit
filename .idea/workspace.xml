@@ -10,16 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3b2fcd-427b-4a3b-b929-05162f1377e7" name="Default Changelist" comment="feat: initialization">
-      <change afterPath="$PROJECT_DIR$/src/app_tailwind.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/debounce.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/models.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/github/github.api.ts" afterDir="false" />
+    <list default="true" id="db3b2fcd-427b-4a3b-b929-05162f1377e7" name="Default Changelist" comment="feat: debounce hook, search query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/models.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/github/github.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/github/github.api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +93,7 @@
       <workItem from="1669295033026" duration="124000" />
       <workItem from="1669295167802" duration="189000" />
       <workItem from="1669295386301" duration="6924000" />
-      <workItem from="1669641294787" duration="951000" />
+      <workItem from="1669641294787" duration="5096000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initialization">
       <created>1669296705942</created>
@@ -107,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669296705943</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: debounce hook, search query">
+      <created>1669642441721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669642441721</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +135,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: initialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: initialization" />
+    <MESSAGE value="feat: debounce hook, search query" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: debounce hook, search query" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2748" y="431" key="#ESLint" timestamp="1669292150528">
@@ -160,10 +163,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1669304274347" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1669296713224">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1669642448747">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1669296713224" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1669642448747" />
     <state x="2534" y="237" key="run.anything.popup" timestamp="1669303667426">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
