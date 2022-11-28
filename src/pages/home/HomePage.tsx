@@ -1,6 +1,7 @@
 import React from "react";
 import {useSearchUsersQuery, useLazyGetUserReposQuery} from "../../store/github/github.api"
 import {useDebounce} from "../../hooks/debounce";
+import {RepoCard} from "../../components/RepoCard";
 
 export const HomePage = () => {
   const [search, setSearch] = React.useState<string>('')
@@ -21,6 +22,7 @@ export const HomePage = () => {
   const switchToUserPage = (userName: string) => {
     return () => {
       fetchRepos(userName)
+      setDropdown(false)
     }
   }
 
@@ -63,7 +65,10 @@ export const HomePage = () => {
           {areReposLoading && <p className="text-center">Repos are loading...</p>}
           {
             userRepos?.map(repos => (
-              <p>{repos.url}</p>
+              <RepoCard
+                repo={repos}
+                key={repos.id}
+              />
             ))
           }
         </div>
