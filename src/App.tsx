@@ -1,8 +1,8 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import {HomePage} from "./pages/home/HomePage";
 import {FavouritesPage} from "./pages/favourites/FavouritesPage";
 import {Navigation} from "./components/Navigation";
+import {HomePage} from "./pages/home/HomePage";
 
 function App() {
   return (

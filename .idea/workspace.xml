@@ -10,11 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3b2fcd-427b-4a3b-b929-05162f1377e7" name="Default Changelist" comment="feat: user's repos query">
-      <change afterPath="$PROJECT_DIR$/src/components/RepoCard.tsx" afterDir="false" />
+    <list default="true" id="db3b2fcd-427b-4a3b-b929-05162f1377e7" name="Default Changelist" comment="feat: user repo cards">
+      <change afterPath="$PROJECT_DIR$/src/hooks/action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/redux.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/github/github.slice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/github/github.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/github/github.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RepoCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RepoCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/favourites/FavouritesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/favourites/FavouritesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +29,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="RTT-3" />
+        <entry key="$PROJECT_DIR$" value="RTT-4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +101,7 @@
       <workItem from="1669295033026" duration="124000" />
       <workItem from="1669295167802" duration="189000" />
       <workItem from="1669295386301" duration="6924000" />
-      <workItem from="1669641294787" duration="7124000" />
+      <workItem from="1669641294787" duration="10521000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initialization">
       <created>1669296705942</created>
@@ -120,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669647395276</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: user repo cards">
+      <created>1669650230078</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669650230078</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +159,8 @@
     <MESSAGE value="feat: initialization" />
     <MESSAGE value="feat: debounce hook, search query" />
     <MESSAGE value="feat: user's repos query" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: user's repos query" />
+    <MESSAGE value="feat: user repo cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: user repo cards" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2748" y="431" key="#ESLint" timestamp="1669292150528">
@@ -175,10 +187,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1669304274347" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1669647403733">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1669650241137">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1669647403733" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1669650241137" />
     <state x="2534" y="237" key="run.anything.popup" timestamp="1669303667426">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
