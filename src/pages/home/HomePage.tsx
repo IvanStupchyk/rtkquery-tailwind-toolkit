@@ -1,9 +1,9 @@
 import React from "react";
 import {useSearchUsersQuery, useLazyGetUserReposQuery} from "../../store/github/github.api"
 import {useDebounce} from "../../hooks/debounce";
-import {RepoCard} from "../../components/RepoCard";
+import {RepoCardContainer} from "../../components/RepoCardContainer";
 
-export const HomePage = () => {
+export const HomePage = React.memo(() => {
   const [search, setSearch] = React.useState<string>('')
   const [dropdown, setDropdown] = React.useState<boolean>(false)
 
@@ -65,7 +65,7 @@ export const HomePage = () => {
           {areReposLoading && <p className="text-center">Repos are loading...</p>}
           {
             userRepos?.map(repos => (
-              <RepoCard
+              <RepoCardContainer
                 repo={repos}
                 key={repos.id}
               />
@@ -75,6 +75,6 @@ export const HomePage = () => {
       </div>
     </div>
   )
-}
+})
 
 

@@ -1,5 +1,6 @@
 import React from "react";
 import {useAppSelector} from "../../hooks/redux";
+import {FavouriteCardContainer} from "../../components/FavouriteCardContainer";
 
 export const FavouritesPage = () => {
   const {favourites} = useAppSelector(state => state.github)
@@ -13,10 +14,10 @@ export const FavouritesPage = () => {
       <ul className="list-none">
         {
           favourites.map(f => (
-            <li key={f}>
-              <a target="_blank" href={f}>
-                {f}
-              </a>
+            <li key={f.id}>
+              <FavouriteCardContainer
+                repoData={f}
+              />
             </li>
           ))
         }
