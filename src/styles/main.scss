@@ -1,0 +1,15 @@
+@import "./reset.scss";
+
+img {
+  object-fit: contain;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -26,6 +26,14 @@ export interface ServerResponse<T> {
   items: T[];
 }
 
+export interface FavouriteCardType {
+  html_url: string
+  full_name: string
+  id: number
+  user_avatar: string
+  user_login: string
+}
+
 export interface UserOwner {
   login: string;
   id: number;
